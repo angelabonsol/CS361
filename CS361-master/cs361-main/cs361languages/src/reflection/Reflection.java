@@ -48,19 +48,23 @@ public class Reflection {
 		// You need to use the EXACT format of the output
 		// Hint: Use the method getSuperClass()
 		System.out.println("Inheritance chain:");
-		Class temp = o.getClass().getSuperclass();
-		System.out.print(o.getClass().getName() + " inherits from " + temp.getName());
+//		Class temp = o.getClass().getSuperclass();
+//		System.out.print(o.getClass().getName() + " inherits from " + temp.getName());
+		Class temp = o.getClass();
 		
-		while (temp != null){
-			temp = temp.getClass().getSuperclass();
-			System.out.print(" inherits from " + temp.getName());
-			
-			if ( temp == null )
-				System.out.print("inherits from java.lang.Object");
-				break;
+//		while (temp != null){
+//			temp = temp.getClass().getSuperclass();
+//			System.out.print(" inherits from " + temp.getName());
+//			
+//			if ( temp == null )
+//				System.out.print("inherits from java.lang.Object");
+//				break;
+//		}
+
+		while (temp !=null) {
+			System.out.print(temp.getName() + " inherits from ");
+			temp = temp.getSuperclass();
 		}
-	//	;
-		
 		
 	}
 	
@@ -82,6 +86,7 @@ public class Reflection {
 		{
 			System.out.println( m[i].getName());
 		}
+		
 	}
 
 	/**
@@ -105,6 +110,8 @@ public class Reflection {
 		r.correspondingClass(s);
 		r.inheritanceChain(s);
 		r.listMethods(s);
+		
+		System.out.println();
 		
 		// Demonstration of the methods on an object of type ColoredCircle
 		// TODO To complete		

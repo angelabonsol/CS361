@@ -4,8 +4,7 @@
 package mystack;
 
 /**
- * @author ADD YOUR NAME 
- *	Angela Bonsol
+ * @author Angela Bonsol
  */
 
 // Stack using generics

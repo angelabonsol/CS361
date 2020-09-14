@@ -59,8 +59,8 @@ public class Circle extends GraphicObject implements Cloneable{
 	 */
 //	@Override
 	public String toString() {
-		return "Circle: " + "centerX =" + this.centerX + "centerY = " 
-					+ this.centerY + "radius = " + this.radius;
+		return "Circle: " + "centerX = " +  this.centerX + " " + "centerY = " 
+					+ this.centerY + " " + "radius = " + this.radius;
 	}
 
 	// TODO To complete
